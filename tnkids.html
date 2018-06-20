@@ -13,17 +13,24 @@
         
         <script type="text/babel">
             class Welcome extends React.Component {
+                constructor(props){
+                    super(props);
+                    this.state = {
+                        number: 1
+                    }
+                }
+                
                 render() {
                     return (
                         <div>
-                            <h1>Welcome, Tennessee Kids!</h1>
+                            <h1>Welcome, {this.props.name}!</h1>
                         </div>
                     );
                 }
             }
 
             ReactDOM.render(
-                <Welcome />, document.getElementById('app')
+                <Welcome name="Tennessee Kid"/>, document.getElementById('app')
             );
 
         </script>
